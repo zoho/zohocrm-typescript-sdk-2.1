@@ -63,7 +63,7 @@ export class Constants {
 
     public static ZOHO_SDK = "X-ZOHO-SDK";
 
-    public static SDK_VERSION = "1.0.0";
+    public static SDK_VERSION = "1.0.1";
 
     public static MYSQL_HOST = "localhost";
 
