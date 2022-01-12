@@ -200,7 +200,7 @@ export class OAuthToken implements Token {
             }
 
             if (oauthToken == null) {//first time
-                token = (this.refreshToken === null) ? (await this.generateAccessToken(user, store)).getAccessToken() : (await this.refreshAccessToken(user, store)).getAccessToken();
+                token = (this.refreshToken == null) ? (await this.generateAccessToken(user, store)).getAccessToken() : (await this.refreshAccessToken(user, store)).getAccessToken();
             }
             else if (oauthToken.getExpiresIn() !== undefined && (parseInt(oauthToken.getExpiresIn()) - (new Date().getTime())) < 5000) { //access token will expire in next 5 seconds or less
                 Logger.info(Constants.REFRESH_TOKEN_MESSAGE);
@@ -275,8 +275,6 @@ export class OAuthToken implements Token {
         let url = initializer.getEnvironment().getAccountsUrl();
 
         var formDataRequestBody = new FormData();
-
-        formDataRequestBody.append(Constants.REFRESH_TOKEN, this.refreshToken);
 
         formDataRequestBody.append(Constants.CLIENT_ID, this.clientID);
 
