@@ -115,7 +115,7 @@ export class DBStore implements TokenStore {
                     [token.getId(), user.getEmail(), token.getClientId(), token.getClientSecret(), token.getRefreshToken(), token.getAccessToken(), token.getGrantToken(), token.getExpiresIn(), token.getRedirectURL()]
                 ]
                 
-                new Promise<void>(function (resolve, reject) {
+                return new Promise<void>(function (resolve, reject) {
                     dbStoreInstance.deleteToken(token).then(function () {
                         connection.connect(function (err) {
                             if (err) {
@@ -149,7 +149,7 @@ export class DBStore implements TokenStore {
                 
                 var sqlQuery = await this.constructDBQuery(token.getUserMail(), token, true);
                 
-                new Promise(function (resolve, reject) {
+                return new Promise(function (resolve, reject) {
                     connection.connect(function (err) {
                         if (err) throw err;
                         
