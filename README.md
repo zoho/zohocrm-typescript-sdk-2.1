@@ -329,7 +329,7 @@ Before you get started with creating your TypeScript application, you need to re
     /*
      * Configure the environment
      * which is of the pattern Domain.Environment
-     * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter
+     * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter, JPDataCenter
      * Available Environments: PRODUCTION(), DEVELOPER(), SANDBOX()
     */
     let environment: Environment = ZOHOCRMSDK.USDataCenter.PRODUCTION();
@@ -483,7 +483,7 @@ Initialize the SDK using the following code.
             /*
             * Configure the environment
             * which is of the pattern Domain.Environment
-            * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter
+            * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter, JPDataCenter
             * Available Environments: PRODUCTION(), DEVELOPER(), SANDBOX()
             */
             let environment: ZOHOCRMSDK.Environment = ZOHOCRMSDK.USDataCenter.PRODUCTION();
@@ -706,7 +706,7 @@ await ZOHOCRMSDK.Initializer.removeUserConfiguration(user, environment)
             /*
             * Configure the environment
             * which is of the pattern Domain.Environment
-            * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter
+            * Available Domains: USDataCenter, EUDataCenter, INDataCenter, CNDataCenter, AUDataCenter, JPDataCenter
             * Available Environments: PRODUCTION(), DEVELOPER(), SANDBOX()
             */
             let environment: ZOHOCRMSDK.Environment = ZOHOCRMSDK.USDataCenter.PRODUCTION();
